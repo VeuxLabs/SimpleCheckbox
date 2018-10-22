@@ -153,7 +153,7 @@ open class Checkbox: UIControl {
     }
 
     private func squareBorder(rect: CGRect) {
-        let rectanglePath = UIBezierPath(rect: rect)
+        let rectanglePath = UIBezierPath(roundedRect: rect, cornerRadius: 2)
 
         if isChecked {
             checkedBorderColor.setStroke()
