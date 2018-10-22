@@ -8,7 +8,7 @@ import UIKit
 
 /// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
 /// to be performant and easy to implement.
-public class Checkbox: UIControl {
+open class Checkbox: UIControl {
 
     // MARK: - Enums
 
@@ -129,7 +129,7 @@ public class Checkbox: UIControl {
         }
     }
 
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         drawBorder(shape: borderStyle, in: rect)
         if isChecked {
             drawCheckmark(style: checkmarkStyle, in: rect)
@@ -259,7 +259,7 @@ public class Checkbox: UIControl {
         }
     }
 
-    override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+    override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let relativeFrame = self.bounds
         let hitTestEdgeInsets = UIEdgeInsets(top: -increasedTouchRadius, left: -increasedTouchRadius, bottom: -increasedTouchRadius, right: -increasedTouchRadius)
         let hitFrame = relativeFrame.inset(by: hitTestEdgeInsets)
